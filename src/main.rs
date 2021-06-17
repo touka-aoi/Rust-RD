@@ -1,8 +1,14 @@
+use proconio::input;
+
 fn main() {
-    proconio::input! {
-        n: i32,
-        a: i32,
-        b: i32,
+    input! {
+        sx: f32,
+        sy: f32,
+        gx: f32,
+        gy: f32,
+
     }
-    println!("{}", n - a + b);
+    let ans: f32;
+    ans = sx + (((gx - sx) / (gy + sy)) * sy);
+    println!("{}", ans);
 }
